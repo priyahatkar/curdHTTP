@@ -1,0 +1,32 @@
+
+
+<form [formGroup]="postForm" (ngSubmit)="onPostInfo()">
+    <mat-form-field class="example-full-width w-100" appearance="fill">
+        <mat-label>Title</mat-label>
+        <input type="text" formControlName="title" matInput placeholder="Title">
+    </mat-form-field>
+    <mat-form-field class="example-full-width w-100" appearance="fill">
+        <mat-label>Body</mat-label>
+        <input type="text" formControlName="body"  matInput placeholder="Body">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>UserId</mat-label>
+        <mat-select formControlName="userId">
+            <mat-option value="1">1</mat-option>
+            <mat-option value="2">2</mat-option>
+            <mat-option value="3">3</mat-option>
+            <mat-option value="4">4</mat-option>
+            <mat-option value="5">5</mat-option>
+            <mat-option value="6">6</mat-option>
+            <mat-option value="7">7</mat-option>
+            <mat-option value="8">8</mat-option>
+            <mat-option value="9">9</mat-option>
+            <mat-option value="10">10</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div class="text-right">
+        <button class="btn btn-primary" type="submit" *ngIf="!updateMode">Save</button>
+        <button class="btn btn-primary" (click)="onPOstUpdate()" *ngIf="updateMode"  type="button">Update</button>
+        <button class="btn btn-danger mx-3" type="button" (click)="onPostCancel()">Cancel</button>
+    </div>
+</form>

@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h2>{{arrayPost.title}}</h2>
+                </div>
+                <div class="card-body">
+                    <p>{{arrayPost.body}}</p>
+                </div>
+                <div class="card-footer d-flex justify-content-around">
+                    <button class="btn btn-primary" (click)="onPostEdit(arrayPost)">Edit</button>
+                    <button class="btn btn-danger" (click)="onDeletePost(arrayPost.id)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+
+<button class="btn btn-primary mt-5" (click)="onPostAdd()">Add POst</button>
+
+
+<app-post-card [arrayPost]="post" *ngFor="let post of postArray" 
+(emitPost)="onEditEmitPost($event)" (emitDeletePost)="onDeletePostData($event)"></app-post-card>
